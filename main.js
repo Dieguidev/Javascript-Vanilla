@@ -32,3 +32,14 @@ if (edad > 0) {
 } else {
   alert('no eres humano, no puedes comprar en este ecommerce');
 };
+
+
+let container= document.getElementById('container');
+products.forEach(item => {
+  let producto = document.createElement('div');
+  producto.innerHTML=`
+    <h2>prenda: ${item.name}</p>
+    <p>Precio: $${item.price}</p>
+  `;
+  container.append(producto);
+})
